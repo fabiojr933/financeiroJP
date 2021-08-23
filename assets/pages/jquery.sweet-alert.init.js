@@ -62,38 +62,38 @@
         //Parameter
         $('#sa-params').click(function () {
             swal({
-              title: 'Are you sure?',
-              text: "You won't be able to revert this!",
-              type: 'warning',
-              showCancelButton: true,
-              confirmButtonColor: '#3085d6',
-              cancelButtonColor: '#d33',
-              confirmButtonText: 'Yes, delete it!',
-              cancelButtonText: 'No, cancel!',
-              confirmButtonClass: 'btn btn-success',
-              cancelButtonClass: 'btn btn-danger',
-              buttonsStyling: false,
-              reverseButtons: true
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                buttonsStyling: false,
+                reverseButtons: true
             }).then((result) => {
-              if (result.value) {
-                swal(
-                  'Deleted!',
-                  'Your file has been deleted.',
-                  'success'
-                )
-              // result.dismiss can be 'cancel', 'overlay',
-              // 'close', and 'timer'
-              } else if (result.dismiss === 'cancel') {
-                swal(
-                  'Cancelled',
-                  'Your imaginary file is safe :)',
-                  'error'
-                )
-              }
+                if (result.value) {
+                    swal(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
+                    // result.dismiss can be 'cancel', 'overlay',
+                    // 'close', and 'timer'
+                } else if (result.dismiss === 'cancel') {
+                    swal(
+                        'Cancelled',
+                        'Your imaginary file is safe :)',
+                        'error'
+                    )
+                }
             })
         });
 
-       
+
 
         //Auto Close Timer
         $('#sa-close').click(function () {
@@ -119,8 +119,8 @@
                 title: '<i>HTML</i> <u>example</u>',
                 type: 'info',
                 html: 'You can use <b>bold text</b>, ' +
-                '<a href="//coderthemes.com/">links</a> ' +
-                'and other HTML tags',
+                    '<a href="//coderthemes.com/">links</a> ' +
+                    'and other HTML tags',
                 showCloseButton: true,
                 showCancelButton: true,
                 confirmButtonClass: 'btn btn-success',
@@ -195,8 +195,8 @@
                 swal({
                     title: 'All done!',
                     html: 'Your answers: <pre>' +
-                    JSON.stringify(result) +
-                    '</pre>',
+                        JSON.stringify(result) +
+                        '</pre>',
                     confirmButtonText: 'Lovely!',
                     showCancelButton: false
                 })
@@ -207,63 +207,63 @@
 
         //Error
         $('#sa-error').on('click', () => {
-        swal('Oops...', 'Something went wrong!', 'error')
+            swal('Oops...', 'Something went wrong!', 'error')
         })
 
         //long-text
 
         $('#long-text').on('click', () => {
             swal({
-              imageUrl: './assets/images/general/robot.jpg',
-              imageHeight: 1512,
-              imageAlt: 'A tall image'
+                imageUrl: './assets/images/general/robot.jpg',
+                imageHeight: 1512,
+                imageAlt: 'A tall image'
             })
-          })
+        })
 
         //position
 
         $('#position').on('click', () => {
-             swal({
-              position: 'top-end',
-              type: 'success',
-              title: 'Your work has been saved',
-              showConfirmButton: false,
-              timer: 1500
+            swal({
+                position: 'top-end',
+                type: 'success',
+                title: 'Salvando....Aguarde....',
+                showConfirmButton: false,
+                timer: 1500
             })
-          })
+        })
 
         //custom-image
 
-         $('#custom-image').on('click', () => {
+        $('#custom-image').on('click', () => {
             swal({
-              title: 'Sweet!',
-              text: 'Modal with a custom image.',
-              imageUrl: 'https://unsplash.it/400/200/?random',
-              imageWidth: 400,
-              imageHeight: 200,
-              imageAlt: 'Custom image',
-              animation: false
+                title: 'Sweet!',
+                text: 'Modal with a custom image.',
+                imageUrl: 'https://unsplash.it/400/200/?random',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+                animation: false
             })
-          })
-         //custom-width-padding-background
+        })
+        //custom-width-padding-background
 
-         $('#custom-img-bg').on('click', () => {
+        $('#custom-img-bg').on('click', () => {
             swal({
-              title: 'Custom width, padding, background.',
-              width: 600,
-              padding: 100,
-              background: '#fff url(https://bit.ly/1Nqn9HU)'
+                title: 'Custom width, padding, background.',
+                width: 600,
+                padding: 100,
+                background: '#fff url(https://bit.ly/1Nqn9HU)'
             })
-          })
+        })
 
-         
+
         //Danger
         $('#dynamic-alert').click(function () {
             swal.queue([{
                 title: 'Your public IP',
                 confirmButtonText: 'Show my public IP',
                 text: 'Your public IP will be received ' +
-                'via AJAX request',
+                    'via AJAX request',
                 showLoaderOnConfirm: true,
                 preConfirm: function () {
                     return new Promise(function (resolve) {
@@ -283,7 +283,7 @@
         $.SweetAlert = new SweetAlert, $.SweetAlert.Constructor = SweetAlert
 }(window.jQuery),
 
-//initializing
+    //initializing
     function ($) {
         "use strict";
         $.SweetAlert.init()

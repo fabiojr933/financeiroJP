@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- Sweet Alert css -->
-    <link href="assets/plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo URL_BASE ?>assets/plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="<?php echo URL_BASE ?>assets/images/favicon.ico">
     <link href="<?php echo URL_BASE ?>assets/plugins/morris-chart/morris.css" rel="stylesheet">
     <link href="<?php echo URL_BASE ?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,14 @@
     <link href="<?php echo URL_BASE ?>assets/css/menu.css" rel="stylesheet" type="text/css">
     <link href="<?php echo URL_BASE ?>assets/css/style.css" rel="stylesheet">
 
+    <!-- Responsive and DataTables -->
+    <link href="<?php echo URL_BASE ?>assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo URL_BASE ?>assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo URL_BASE ?>assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
+    <script>
+        var base_url = "<?php echo URL_BASE ?>";
+    </script>
 </head>
 
 <body class="sticky-header">
@@ -59,15 +66,32 @@
     <!--app js-->
     <script src="<?php echo URL_BASE ?>assets/js/jquery.app.js"></script>
 
+    <!-- Responsive and datatable js -->
+    <script src="<?php echo URL_BASE ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
     <!-- Sweet Alert Js  -->
-    <script src="assets/plugins/sweet-alert/sweetalert2.min.js"></script>
-    <script src="assets/pages/jquery.sweet-alert.init.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/plugins/sweet-alert/sweetalert2.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/pages/jquery.sweet-alert.init.js"></script>
+
+    <!--  Chart js -->
+    <script src="<?php echo URL_BASE ?>assets/pages/chartjs-init.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/plugins/chart-js/Chart.bundle.js"></script>
+
     <script>
         jQuery(document).ready(function($) {
             $('.counter').counterUp({
                 delay: 100,
                 time: 1200
             });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#datatable').DataTable(),
+                $('#datatable2').DataTable();
         });
     </script>
 </body>

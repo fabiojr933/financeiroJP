@@ -1,6 +1,6 @@
 <?php
 define("SERVIDOR", "localhost");
-define("BANCO", "teste");
+define("BANCO", "financeiro");
 define("USUARIO", "root");
 define("SENHA", "");
 define("CHARSET", "UTF8");
